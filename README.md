@@ -1,0 +1,2 @@
+# pricingpanel
+Simple pricing panel!
