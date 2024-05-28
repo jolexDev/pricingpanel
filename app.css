@@ -1,0 +1,309 @@
+* {
+  box-sizing: border-box;
+  background: #60a9ff;
+  margin: 0 auto;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Start CSS */
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.panel {
+  background: white;
+  min-height: 45rem;
+  max-width: 70rem;
+  margin: 14rem auto;
+  border-radius: 1em;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  font-size: 20px;
+  padding: 1em 0;
+}
+
+/* Box Priprema */
+.personal > * {
+  background: transparent;
+}
+
+.small-team > * {
+  background: transparent;
+}
+
+.enterprise > * {
+  background: transparent;
+}
+
+.panel div {
+  background: transparent;
+}
+
+/* Image size */
+.personal,
+.small-team,
+.enterprise,
+img {
+  width: 70%;
+}
+
+/* Text Size */
+
+.personal div,
+.small-team div,
+.enterprise div {
+  font-size: 0.95em;
+  font-weight: 400;
+  color: #016ff9;
+  text-align: center;
+  padding: 1em 0;
+}
+
+.personal h4,
+.small-team h4,
+.enterprise h4 {
+  font-size: 1em;
+  font-weight: 500;
+  color: gray;
+  letter-spacing: 0.2em;
+}
+
+/* Border sizes*/
+
+.personal,
+.small-team {
+  border-right: 0.1px solid rgb(224, 243, 248);
+}
+
+.personal div {
+  min-width: 12.5em;
+  border-top: thin solid rgb(224, 243, 248);
+  border-bottom: thin solid rgb(224, 243, 248);
+}
+
+.small-team div {
+  min-width: 15.2em;
+  border-top: thin solid rgb(224, 243, 248);
+  border-bottom: thin solid rgb(224, 243, 248);
+}
+
+.enterprise div {
+  min-width: 12.5em;
+  border-top: thin solid rgb(224, 243, 248);
+  border-bottom: thin solid rgb(224, 243, 248);
+}
+
+/* Prices Label */
+
+span {
+  font-size: 2.1em;
+  font-weight: bold;
+  color: #016ff9;
+}
+
+/* Prices Button */
+
+button {
+  font-weight: 100;
+  font-size: 1.2em;
+  padding: 0.7em 1.8em;
+  border-radius: 0.4em;
+  border: thin solid #016ff9;
+  color: #016ff9;
+}
+
+.small-team > button {
+  background-color: #48aaff;
+  border: transparent;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.small-team > button:hover {
+  cursor: pointer;
+  background-color: #2d9afa;
+}
+
+.personal > button,
+.enterprise > button {
+  transition: background-color 0.3s;
+}
+
+.personal > button:hover,
+.enterprise > button:hover {
+  cursor: pointer;
+  background-color: whitesmoke;
+}
+
+/* Kolone */
+.personal,
+.small-team,
+.enterprise {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* Responsive Design */
+
+@media screen and (max-width: 1000px) {
+  .panel {
+    flex-flow: column;
+    margin: 0;
+    border-radius: 0;
+    align-items: center;
+    min-height: 70rem;
+    gap: 5em;
+  }
+
+  .personal,
+  .small-team {
+    border-right: transparent;
+  }
+
+  .personal,
+  .small-team,
+  .enterprise {
+    gap: 2em;
+  }
+
+  .personal > div,
+  .small-team > div,
+  .enterprise > div {
+    padding: 1.5em 0;
+    min-width: 130%;
+    font-size: 0.8em;
+  }
+}
